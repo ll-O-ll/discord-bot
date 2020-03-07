@@ -67,7 +67,7 @@ async def join(ctx):
 async def leave(ctx):
     voice_client = ctx.voice_client
     if voice_client:
-        await voice_client.disconnect(force=True)
+        await voice_client.disconnect()
         await ctx.message.add_reaction("☑")
     else:
     	await ctx.send("I'm not in a voice channel! \U0001f611")   
